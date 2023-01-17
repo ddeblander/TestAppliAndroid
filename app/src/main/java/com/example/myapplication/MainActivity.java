@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Person pact=null;
+    private Person pInsert=null;
     private Maison m=null;
     public static final String MAISON = "Maison";
 
@@ -51,9 +52,7 @@ public class MainActivity extends AppCompatActivity {
         save=findViewById(R.id.idSaveButton);
         lv=findViewById(R.id.listView);
 
-        adpt= new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,m.GetList());
-
-        lv.setAdapter(adpt);
+        loadList();
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -66,6 +65,38 @@ public class MainActivity extends AppCompatActivity {
     }
     public void clickSave(View v)
     {
-        
+
+        String str=idCode.getText().toString();
+        try
+        {
+            int id=Integer.parseInt(str);
+            pInsert = new Person(id,nom.getText().toString(),prenom.getText().toString());
+            m.AddListPerson(pInsert);
+            Toast toast=Toast.makeText(this,String.valueOf(id), Toast.LENGTH_SHORT);
+            toast.show();
+            initText();
+            loadList();
+        }
+        catch (Exception e)
+        {
+            Toast toast=Toast.makeText(this, R.string.ExceptionINT, Toast.LENGTH_LONG);
+            toast.show();
+        }
+
+
+
+    }
+    private void loadList()
+    {
+        adpt= new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,m.GetList());
+
+        lv.setAdapter(adpt);
+    }
+    private void initText()
+    {
+        idCode.setText("");
+        nom.setText("");
+        prenom.setText("");
+
     }
 }

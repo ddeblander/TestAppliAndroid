@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="promptID">ID Personne</string>
+    <string name="id_person">ID Personne</string>
+    <string name="nom">Nom</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="save">Sauvegarde</string>
+    <string name="ExceptionINT">Pas un numéro ID inséré</string>
+</resources>

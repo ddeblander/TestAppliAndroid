@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="ID person" />
+                    android:text="@string/id_person" />
 
                 <EditText
                     android:id="@+id/idCode"
@@ -54,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Nom" />
+                    android:text="@string/nom" />
 
                 <EditText
                     android:id="@+id/nom"
@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Prénom" />
+                    android:text="@string/pr_nom" />
 
                 <EditText
                     android:id="@+id/prenom"
@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="clickSave"
-                    android:text="Save" />
+                    android:text="@string/save" />
             </LinearLayout>
 
             <LinearLayout

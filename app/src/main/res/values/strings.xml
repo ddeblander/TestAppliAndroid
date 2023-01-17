@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="promptID">ID Person</string>
+    <string name="id_person">ID person</string>
+    <string name="nom">Name</string>
+    <string name="pr_nom">Surname</string>
+    <string name="save">Save</string>
+    <string name="ExceptionINT">Not a number ID retry with number</string>
 </resources>
